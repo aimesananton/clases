@@ -1,7 +1,7 @@
 class character{
-    constructor(speed, health, sprite){
-        this.x = 0;
-        this.y = 0;
+    constructor(nombre, genero, speed, health, sprite){
+        this.nombre = nombre;
+        this.genero = genero;
         this.inventory = [];
         this.speed = speed;
         this.health = health;
@@ -29,13 +29,14 @@ class character{
 
 
 class curador extends character{
-    constructor(x, y, inventory, speed, health, sprite){
-        super(x, y, inventory, speed, health, sprite);
+    constructor(nombre, genero, speed, health, sprite){
+        super(nombre, genero, speed, health, sprite);
         this.curando = false;
         this.limiteCuracion = 3;
+
     }
 
-    curar(){
+    _curar(){
         if(this.limiteCuracion > 0){
             console.log("Curando...");
             this.limiteCuracion--;
@@ -49,8 +50,8 @@ class curador extends character{
 }
 
 class velocista extends character{
-    constructor(x, y, inventory, speed, health, sprite){
-        super(x, y, inventory, speed, health, sprite);
+    constructor(nombre, genero, speed, health, sprite){
+        super(nombre, genero, speed, health, sprite);
         this.velocidadExtra = 5;
         this.habilidadUsada = false;
         this.estamina = 100;
@@ -69,16 +70,16 @@ class velocista extends character{
 }
 
 
-const wilson = new curador(0, 0, [], 5, 100, "wilson.png");
-const flash = new velocista(0, 0, [], 5, 100, "flash.png");
+const hijo1 = new curador("Wilson", "Masculino", 5, 100, "wilson.png");
+const hijo2 = new velocista("Flash", "Masculino", 10, 100, "flash.png");
 
-wilson.moverseIzquierda();
-wilson.saltar();
-wilson.curar();
+hijo1.moverseIzquierda();
+hijo1.saltar();
+hijo1.curar();
 
-flash.moverseDerecha();
-flash.saltar();
-flash.supervelocidad();
+hijo2.moverseDerecha();
+hijo2.saltar();
+hijo2.supervelocidad();
 
 
 
