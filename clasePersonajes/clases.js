@@ -75,7 +75,7 @@ const hijo2 = new velocista("Flash", "Masculino", 10, 100, "flash.png");
 
 hijo1.moverseIzquierda();
 hijo1.saltar();
-hijo1.curar();
+hijo1._curar();
 
 hijo2.moverseDerecha();
 hijo2.saltar();
