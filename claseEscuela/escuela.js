@@ -24,3 +24,9 @@ class Escuela{
         console.log(`se agrego a ${nuevoEstudiante}`)
     }
 }
+
+const EESTn1 = new Escuela("EESTN", 2001)
+
+EESTn1.agregarEstudiante("Manolo", "Alvear 21", "2292 555", "matriculon.png", 8)
+EESTn1.agregarEstudiante("Javier", "Calle Tenesse", "2292 555", "matriculon.png", 8)
+EESTn1.agregarEstudiante("Martin", "Alvear 21", "2292 555", "matriculon.png", 8)
