@@ -1,9 +1,13 @@
-const { Persona } = require("./Persona");
-
+const { Persona } = require("./Persona.js");
+ 
 class Alumno extends Persona{
-    constructor(){
-        super(nombre, DNI, email )
-        this.materias=[];
-        this.cursos=[];
+    constructor(nombre, DNI, email){
+        super(nombre, DNI, email);
+        this.cursos = [];
     }
 }
+ 
+module.exports = {
+    Alumno
+}
+ 
